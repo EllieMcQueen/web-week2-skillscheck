@@ -109,10 +109,11 @@ const me = {
 function bigOrSmall(arr){
 let answers	= [];
 for (let i = 0; i < aanswers.length, i++; ) {	
-	if (arr[i] > 100 )[   
+	if (arr[i] > 100 )  
 	big.push(arr[1])
+	else
+	small.push(arr[1]) 
 
-]
 	}}
 
 //////////////////PROBLEM 13////////////////////
@@ -171,9 +172,9 @@ myNumbers.forEach(function(item){
 
 // Did you know that George Foreman has five sons named George? Go ahead and change everyone's name in the notGeorge array to George using .map. Store the resulting array in a variable named 'forTheLoveOfGeorge'.
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
-let forTheLoveOfGeorge = [ ];
-let forTheLoveOfGeorge = notGeorge.map(name)   
-return name; 
+////let forTheLoveOfGeorge = [ ];
+//let forTheLoveOfGeorge = notGeorge.map(name)   
+//return name; 
 
 //let notGeorge = ['george', 'george', 'george', 'george', 'george', 'george']
 //return notGeorge;
