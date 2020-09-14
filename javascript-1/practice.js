@@ -59,8 +59,8 @@ else
 // Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
 
 //Code Here
-function iLove(name, love){
-	return name + "loves" + love;
+let iLove = (name, love) =>{
+	return `${name} loves ${love}`;
 	
  }
 
@@ -107,15 +107,17 @@ const me = {
 
 // Code here
 function bigOrSmall(arr){
-var answers = [big, small]  
-for (let i = 0; i < bigOrSmall.length, i++; ) {	
-	if (arr[i] > 100 )  
-	big.push(arr[1])
-	else
-	small.push(arr[1]) 
+var answers = []  
+for (let i = 0; i < arr.length; i++){	
+	if (arr[i] > 100){
+	answers.push('big')}
+	else{    
+	answers.push('small')}
 	}
-	alert(answers);
+	return answers;
 }
+	
+
 
 //////////////////PROBLEM 13////////////////////
 
@@ -125,8 +127,9 @@ for (let i = 0; i < bigOrSmall.length, i++; ) {
 function arrayReverser(arr){
 let reversed =[];
 for(let i = arr.length - 1; i >= 0; i-- ){
-   reversed = arr[i] + []} 
-   return (reversed[i])
+   reversed.push(arr[i]) 
+}
+   return reversed
 }
 
 
@@ -164,7 +167,8 @@ let total = myNumbers.reduce((acc, element) => acc + element);
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-let myNumbersIndex =  myNumbers.forEach//(//() //=> myNumbersIndex.push(item + index));
+let myNumbersIndex = []
+myNumbers.forEach((el,i) => myNumbersIndex.push(i));
 
 
 
@@ -174,13 +178,8 @@ let myNumbersIndex =  myNumbers.forEach//(//() //=> myNumbersIndex.push(item + i
 
 // Did you know that George Foreman has five sons named George? Go ahead and change everyone's name in the notGeorge array to George using .map. Store the resulting array in a variable named 'forTheLoveOfGeorge'.
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
-let forTheLoveOfGeorge = [ ];
-//let forTheLoveOfGeorge = notGeorge.map(name)   
-//return name; 
+let forTheLoveOfGeorge = notGeorge.map(el => el ="George")
 
-//let notGeorge = ['george', 'george', 'george', 'george', 'george', 'george']
-//return notGeorge;
-// Code Here
 
 //////////////////PROBLEM 19////////////////////
 
@@ -203,5 +202,5 @@ let enemies = people.filter(obj => {return obj.awesomeLevel < 5})
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
 // Code Here
-let totallyAwesome = people.reduce((acc, obj) => {return obj.awesomeLevel + acc})
+let totallyAwesome = people.reduce((acc, obj) => acc + obj.awesomeLevel,0)
 	
